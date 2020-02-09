@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "product",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "required": true,
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Cost": {
+      "type": "decimal"
+    },
+    "Picture": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "user": {
+      "model": "user",
+      "via": "products",
+      "plugin": "users-permissions"
+    }
+  }
+}
